@@ -1,16 +1,20 @@
-package com.disasterinfomm
+package com.disasterinfomm.view.activities
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.disasterinfomm.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -25,6 +29,12 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        val firebaseApp = FirebaseApp.getInstance()
+        Log.d("Firebase app", "Firebase installation completed")
+        // Initialize Firebase Auth
+        var auth: FirebaseAuth = Firebase.auth
+        Log.d("Firebase auth", FirebaseAuth.getInstance().uid.toString())
+
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -34,5 +44,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         val location = LatLng(-34.0, 151.0)
         gMap.addMarker(MarkerOptions().position(location).title("Marker in Sydney"))
         gMap.moveCamera(CameraUpdateFactory.newLatLng(location))
+
     }
 }

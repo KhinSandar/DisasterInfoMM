@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.disasterinfomm"
+    namespace = "com.t1mm.disasterinfo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.disasterinfomm"
+        applicationId = "com.t1mm.disasterinfo"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

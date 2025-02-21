@@ -1,4 +1,4 @@
-package com.disasterinfomm
+package com.t1mm.disasterinfo
 
 import org.junit.Test
 

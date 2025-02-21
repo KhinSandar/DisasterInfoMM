@@ -1,4 +1,4 @@
-package com.disasterinfomm
+package com.t1mm.disasterinfo
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleRoomDBInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.disasterinfomm", appContext.packageName)
+        assertEquals("com.t1mm.disasterinfo", appContext.packageName)
     }
 }

@@ -43,7 +43,18 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         // Add a marker and move the camera
         val location = LatLng(-34.0, 151.0)
         gMap.addMarker(MarkerOptions().position(location).title("Marker in Sydney"))
-        gMap.moveCamera(CameraUpdateFactory.newLatLng(location))
+        gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12f))
 
+
+        gMap.setOnMapClickListener { latLng ->
+            Log.d("Location", latLng.toString())
+            val tappedLocation = getTappedLocation(latLng)
+        }
+    }
+
+    private fun getTappedLocation(latLng: LatLng) {
+        gMap.addMarker(
+            MarkerOptions().position(latLng).title(latLng.toString())
+        )
     }
 }

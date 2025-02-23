@@ -34,12 +34,16 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures {
+        viewBinding=true
+    }
 }
 buildscript {
     repositories {
         google()
         mavenCentral()
     }
+
 }
 dependencies {
 
@@ -53,6 +57,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.play.services.maps)
     implementation(libs.play.services.location)
+    implementation(libs.firebase.config.ktx)
+    implementation(libs.firebase.analytics.ktx)
+    implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
 
     // Import the Firebase BoM
     // Import the Firebase BoM

@@ -7,6 +7,6 @@ plugins {
 
 buildscript {
     dependencies {
-        classpath("com.google.gms:google-services:4.3.15")  // Latest version
+        classpath("com.google.gms:google-services:4.4.2")  // Latest version
     }
 }

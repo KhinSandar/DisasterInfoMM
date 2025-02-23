@@ -9,7 +9,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.t1mm.disasterinfo"
+            applicationId = "com.t1mm.disasterinfo"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -59,7 +59,7 @@ dependencies {
     implementation(libs.play.services.location)
     implementation(libs.firebase.config.ktx)
     implementation(libs.firebase.analytics.ktx)
-    implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
 
     // Import the Firebase BoM
     // Import the Firebase BoM

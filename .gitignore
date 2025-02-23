@@ -13,6 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+secrets.properties
 
 # Gradle files
 .gradle/
@@ -39,6 +40,7 @@ render.experimental.xml
 *.keystore
 
 # Google Services (e.g. APIs or Firebase)
+app/google-services.json
 google-services.json
 
 # Android Profiling

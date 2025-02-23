@@ -1,6 +1,7 @@
 package com.t1mm.disasterinfo.view.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -25,8 +26,12 @@ class RemoteConfigActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+
         setContentView(R.layout.remote_config)
 
+
+        //RemoteConfig Setup
         findViewById<Button>(R.id.fetchButton).setOnClickListener { fetchWelcome()}
 
         remoteConfig = Firebase.remoteConfig
@@ -55,6 +60,12 @@ class RemoteConfigActivity: AppCompatActivity() {
         })
 
         fetchWelcome()
+
+        //Google Map Implementation
+        findViewById<Button>(R.id.show_map).setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

@@ -1,6 +1,3 @@
-*.iml
-.gradle
-/local.properties
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -10,17 +7,17 @@
 .DS_Store
 /build
 /captures
-.externalNativeBuild
-.cxx
-local.properties
 secrets.properties
 
-# Gradle files
-.gradle/
-build/
+#gradle
+.gradle
+/app/build
 
-# Log/OS Files
+#file
+local.properties
+/local.properties
 *.log
+*.iml
 
 # Android Studio generated files and folders
 captures/
@@ -29,19 +26,10 @@ captures/
 *.apk
 output.json
 
-# IntelliJ
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
 # Keystore files
 *.jks
 *.keystore
 
 # Google Services (e.g. APIs or Firebase)
+/app/google-services.json
 app/google-services.json
-google-services.json
-
-# Android Profiling
-*.hprof

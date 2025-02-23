@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DisasterInfo</string>
     <string name="remote_message">fetch remote server</string>
+    <string name="show_map">Show Map</string>
+    <string name="zoom_in">+</string>
+    <string name="zoom_out">-</string>
 </resources>

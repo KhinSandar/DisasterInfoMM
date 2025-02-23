@@ -9,10 +9,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.t1mm.disasterinfo" />
+                  <option name="mobileSdkAppId" value="1:341971643151:android:b9ad59271646004ec5ac7a" />
+                  <option name="projectId" value="fir-test-c0fc4" />
+                  <option name="projectNumber" value="341971643151" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

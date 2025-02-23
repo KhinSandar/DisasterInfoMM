@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <!-- Zoom In Button -->
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/zoom_in_btn"
+        android:text="@string/zoom_in"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/zoom_out_btn"
+        android:text="@string/zoom_out"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        app:layout_constraintTop_toBottomOf="@+id/zoom_in_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

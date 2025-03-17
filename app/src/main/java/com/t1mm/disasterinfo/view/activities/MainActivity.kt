@@ -16,45 +16,11 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class MainActivity : AppCompatActivity(), OnMapReadyCallback {
-
-    private lateinit var gMap: GoogleMap
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
-        val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
-        mapFragment.getMapAsync(this)
-
-        val firebaseApp = FirebaseApp.getInstance()
-        Log.d("Firebase app", "Firebase installation completed")
-        // Initialize Firebase Auth
-        var auth: FirebaseAuth = Firebase.auth
-        Log.d("Firebase auth", FirebaseAuth.getInstance().uid.toString())
-
-    }
-
-    override fun onMapReady(googleMap: GoogleMap) {
-        gMap = googleMap
-
-        // Add a marker and move the camera
-        val location = LatLng(-34.0, 151.0)
-        gMap.addMarker(MarkerOptions().position(location).title("Marker in Sydney"))
-        gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12f))
-
-
-        gMap.setOnMapClickListener { latLng ->
-            Log.d("Location", latLng.toString())
-            val tappedLocation = getTappedLocation(latLng)
-        }
-    }
-
-    private fun getTappedLocation(latLng: LatLng) {
-        gMap.addMarker(
-            MarkerOptions().position(latLng).title(latLng.toString())
-        )
     }
 }
